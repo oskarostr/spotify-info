@@ -1,0 +1,65 @@
+@import './colors';
+
+.recently-played__content-container {
+    padding: 1rem 2rem 1rem 15rem;
+}
+
+.recently-played__elements-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.recently-played__card {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: .25rem 0;
+    border-radius: 15px;
+    background-color: $dark-color;
+    overflow: hidden;
+    transition: .3s;
+
+    img {
+        height: 100px;
+        margin-right: 1rem;
+    }
+    
+    h1 {
+        font-size: 1.7rem;
+        color: $font-color;
+    }
+
+    h2 {
+        font-size: 1rem;
+        color: $darker-font-color;
+    }
+
+    .time-passed {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-right: 2rem;
+        color: $darker-font-color;
+        
+        .icon {
+            margin-right: .4rem;
+            font-size: 1.7rem;
+        }
+
+        .time {
+            font-size: 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .recently-played__content-container {
+        padding: 1rem 2rem 5.5rem 2rem;
+    }
+}
