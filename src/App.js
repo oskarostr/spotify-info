@@ -18,7 +18,7 @@ function App() {
   const spotify = new SpotifyWebApi()
 
   const authEndpoint = "https://accounts.spotify.com/authorize"
-  const redirectUri = 'http://localhost:3000/callback'
+  const redirectUri = 'https://oskarostr.github.io/spotify-info/callback'
   const clientID = '38c53561ad794547901185e5b90be818'
 
   const scopes = [
