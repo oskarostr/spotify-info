@@ -11,3 +11,4 @@ Technologies used in this project
 ## Other
 - [Spotify authorization using JS](https://javascript.plainenglish.io/how-to-include-spotify-authorization-in-your-react-app-577b63138fd7).  
 - [Spotify Web API JS](https://github.com/JMPerez/spotify-web-api-js) used for fetching metadata and user's information.
+- [Icons for React](https://github.com/react-icons/react-icons)
