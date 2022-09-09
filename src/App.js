@@ -17,16 +17,12 @@ function App() {
 
   const spotify = new SpotifyWebApi()
 
-  const authEndpoint = "https://accounts.spotify.com/authorize"
-  const redirectUri = 'https://oskarostr.github.io/spotify-info/callback'
-  const clientID = '38c53561ad794547901185e5b90be818'
-
   const scopes = [
     'user-top-read',
     'user-read-recently-played'
   ]
 
-  const loginUrl = `${authEndpoint}?client_id=${clientID}&redirect_uri=${redirectUri}&scope=${scopes.join("%20")}&response_type=token&show_dialog=true`
+  const loginUrl = `${process.env.REACT_APP_AUTH_ENDPOINT}?client_id=${process.env.REACT_APP_CLIENT_ID}&redirect_uri=${process.env.REACT_APP_REDIRECT_URI}&scope=${scopes.join("%20")}&response_type=token&show_dialog=true`
 
   const getTokenFromUrl = () => {
     return window.location.hash
