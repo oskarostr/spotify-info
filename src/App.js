@@ -17,12 +17,16 @@ function App() {
 
   const spotify = new SpotifyWebApi()
 
+  const AUTH_ENDPOINT = process.env.REACT_APP_AUTH_ENDPOINT
+  const REDIRECT_URI = process.env.REACT_APP_REDIRECT_URI
+  const CLIENT_ID = process.env.REACT_APP_CLIENT_ID
+
   const scopes = [
     'user-top-read',
     'user-read-recently-played'
   ]
 
-  const loginUrl = `${process.env.REACT_APP_AUTH_ENDPOINT}?client_id=${process.env.REACT_APP_CLIENT_ID}&redirect_uri=${process.env.REACT_APP_REDIRECT_URI}&scope=${scopes.join("%20")}&response_type=token&show_dialog=true`
+  const loginUrl = `${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&redirect_uri=${REDIRECT_URI}&scope=${scopes.join("%20")}&response_type=token&show_dialog=true`
 
   const getTokenFromUrl = () => {
     return window.location.hash
